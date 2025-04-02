@@ -3,11 +3,11 @@ import 'pages/navigation_page.dart';  // Import the navigation page for routing.
 import 'pages/photo_handling_page.dart';  // Import the photo handling page for routing.
 import 'package:the_simple_app/pages/counter_page.dart'; // Import the counter page
 void main() {
-  runApp(const MyApp());  // The entry point for the application. It runs the root widget (MyApp).
+  runApp(const TheSimpleApp());  // The entry point for the application. It runs the root widget (MyApp).
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TheSimpleApp extends StatelessWidget {
+  const TheSimpleApp({super.key});
 
   // This widget is the root of your application.
   @override

@@ -2,6 +2,7 @@ import 'dart:async'; // Import Dart's asynchronous utilities (e.g., Timer).
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart'; // Import Google Fonts package to use custom fonts.
 
+// The top half of this page displays 10 boxes, each using a different google font. The bottom half of the page is a picture which toggles between different pictures when you press a button.
 class PhotoHandlingPage extends StatefulWidget { // This page is a stateful widget.
   const PhotoHandlingPage({super.key});
 
@@ -40,17 +41,17 @@ class _PhotoHandlingPageState extends State<PhotoHandlingPage> {
   }
 
   @override
+  // initState() is used to initialize state before the widget is built. In this case, it initializes a periodic timer that prints "tick tock" to the terminal every 3 seconds.
   void initState() {
     super.initState();
-    // Initialize a periodic timer that prints "tick tock" to the terminal every 3 seconds.
     _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
       print('tick tock');
     });
   }
 
   @override
+  // dispose() is used to clean up resources when the widget is removed from the widget tree. It cancels the timer to free resources and prevents memory leaks when the page is no longer in view.
   void dispose() {
-    // Cancel the timer to free resources and prevent memory leaks when the widget is disposed.
     _timer?.cancel();
     super.dispose();
   }
